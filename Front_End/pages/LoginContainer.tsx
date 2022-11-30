@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const client = new ApolloClient({
+  uri: 'http://localhost:8000/graphql/',
+  cache: new InMemoryCache()
+});
+
 type Props = {};
 
 const Presionado = () => {

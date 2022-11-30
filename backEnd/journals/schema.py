@@ -2,6 +2,7 @@ import graphene
 from graphene_django import DjangoObjectType
 
 from .models import Journal
+from users.schema import UserType
 
 
 class JournalType(DjangoObjectType):
@@ -21,6 +22,7 @@ class CreateJournal(graphene.Mutation):
     id = graphene.Int()
     title = graphene.String()
     body = graphene.String()
+    entered_by = graphene.Field(UserType)
 
     #2
     class Arguments:
@@ -29,13 +31,20 @@ class CreateJournal(graphene.Mutation):
 
     #3
     def mutate(self, info, title, body):
-        journal = Journal(title=title, body=body)
+        user = info.context.user or None
+
+        journal = Journal(
+            title=title, 
+            body=body,
+            entered_by=user,
+            )
         journal.save()
 
         return CreateJournal(
             id=journal.id,
             title=journal.title,
             body=journal.body,
+            entered_by=journal.entered_by,
         )
 
 
