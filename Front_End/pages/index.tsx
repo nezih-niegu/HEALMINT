@@ -6,16 +6,38 @@ import Historial from "./Historial";
 import LoginContainer from "./LoginContainer";
 import Link from "next/link";
 import CreateRegistry from "./CreateRegistry";
-import type { GetStaticProps, NextPage } from "next";
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import {useQuery, gql } from '@apollo/client';
+import Journal from "../components/Journals"
+import { useState } from "react";
+import { GET_JOURNALS } from "../src/graphql/queries";
 
-export default function Home({data}: any) {
-  console.log(data);
+
+
+
+
+
+export default function Home() {
+ 
+  //console.log(journals.journals);
+  const { loading, error, data} = useQuery(GET_JOURNALS)
+
+  if(loading){
+    return "loading"
+
+  }
+  if(error){
+    return "error"
+  }
+  console.log(data)
+
   return (
+    
     <div className="relative flex-col">
       <Header />
       <div className="h-[100vh] justify-center text-center items-center bg-gray-300 w-full max-w-7xl mx-auto rounded-lg">
         <div>Esta es la pagina principal</div>
+
+        
         <div className="text-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vel
           ratione quo eveniet deleniti sed harum repellat tenetur dolore iste in
