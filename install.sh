@@ -1,5 +1,3 @@
-python3 -m venv ~/HEALMINT
-
 python3 -m pip install -r requirements.txt
 
 cd backEnd
