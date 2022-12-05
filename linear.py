@@ -1,5 +1,4 @@
 # Helper libraries
-# Daf
 # Another comment
 # Comment 3
 import numpy as np
@@ -11,11 +10,9 @@ import tensorflow as tf
  
 print(tf.__version__)
 
-X = np.arange(-10.0, 10.0, 1e-2)
+X = [16,18,20,28,35,40,60,65]
 np.random.shuffle(X)
-#y =  2.0 * X + 1.0
-# Y es el peso, 9.81 la constante de gravedad y X la masa
-y = X
+y = -5*X+10*74.8+6.25*1.64 #Tasa Metabólica Basal Media para Hombres Mexicanos
 
 train_end = int(0.6 * len(X))
 #print (train_end)
