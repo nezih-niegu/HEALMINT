@@ -26,16 +26,13 @@ const authToken = localStorage.getItem(AUTH_TOKEN);
           <div
           onClick={() => {
             localStorage.removeItem(AUTH_TOKEN);
-            <Link href="/LoginContainer">Iniciar sesión</Link>
+            <Link href="/">Iniciar sesión</Link>
           }}
           >
             logout
           </div>
         ): (
-          <Link 
-          to="/login"
-          className="ml1 no-underline black"
-          >
+          <Link href="/LoginContainer" className="ml1 no-underline black">
             login
           </Link>
         )}

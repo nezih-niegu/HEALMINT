@@ -6,6 +6,7 @@ import { ApolloClient, InMemoryCache, gql, useMutation } from '@apollo/client';
 import LoginButton from "../components/LoginButton";
 import client from "../components/ClientApollo"
 import {GET_TOKEN} from "../src/graphql/queries"
+import Start from "../components/Start"
 
 type Props = {};
 
@@ -35,7 +36,7 @@ function LoginContainer({}: Props) {
     
         console.log(data)
         if(data){
-          alert(`Login exitoso`);
+          window.location.href = "/";
         }else{
           alert(`Este usuario o contraseña es incorrecto`);
         }
@@ -64,7 +65,7 @@ function LoginContainer({}: Props) {
             }}
             className="flex-row"
           >
-            <h1>Wenas tardes aquí va una foto chida promocional</h1>
+            <Start></Start>
             <Link
               href="/"
               className="underline transition-all font-bold text-slate-400 hover:text-blue-400"

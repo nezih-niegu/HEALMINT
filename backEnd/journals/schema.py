@@ -22,7 +22,6 @@ class CreateJournal(graphene.Mutation):
     id = graphene.Int()
     title = graphene.String()
     body = graphene.String()
-    entered_by = graphene.Field(UserType)
 
     #2
     class Arguments:
@@ -36,7 +35,6 @@ class CreateJournal(graphene.Mutation):
         journal = Journal(
             title=title, 
             body=body,
-            entered_by=user,
             )
         journal.save()
 
@@ -44,7 +42,6 @@ class CreateJournal(graphene.Mutation):
             id=journal.id,
             title=journal.title,
             body=journal.body,
-            entered_by=journal.entered_by,
         )
 
 
