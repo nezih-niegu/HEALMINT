@@ -30,7 +30,7 @@ import requests
 
 # The server URL specifies the endpoint of your server running the linear_model
 # model with the name "linear_model" and using the predict interface.
-SERVER_URL = 'https://linear-model-service-nezih-niegu.cloud.okteto.net'
+SERVER_URL = 'https://linear-model-service-nezih-niegu.cloud.okteto.net/v1/models/linear_model:predict'
 
 
 
