@@ -1,7 +1,5 @@
 python3 -m pip install -r requirements.txt
-
-cd backEnd
-python3 -m pip install -r requirements.txt
-
-cd ../Front_End
-yarn add --force package.json
+sudo ./run.sh &
+cd Front_End/
+yarn add package.json --ignore-engine
+yarn dev
