@@ -11,10 +11,12 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.urls import path
+
+from . import views
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -81,10 +83,10 @@ WSGI_APPLICATION = 'backEnd.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'healmintdb',
-        'USER': 'postgres',
-        'PASSWORD': 'OneKeyDB',
-        'HOST': 'localhost',
+        'NAME': 'jfmfrteg',
+        'USER': 'jfmfrteg',
+        'PASSWORD': 'RMVx-DWoNSyLJtlYD5C0TwLc4KfmvLMC',
+        'HOST': 'hansken.db.elephantsql.com',
         'PORT': 5432,
     }
 }
