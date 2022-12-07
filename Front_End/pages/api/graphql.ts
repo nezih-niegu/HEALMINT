@@ -11,10 +11,12 @@ type Journal{
 }
 
 type Query{
-    journasl: [Journal]
+    journals: [Journal]
+    linearPredictions(values:$values): String 
+    resnetPredictions(photourl:$values) : String
 }
 
 type Mutation{
     tokenAuth(username: String, password: String): String
-}
-`
+}`
+

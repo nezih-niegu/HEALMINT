@@ -29,11 +29,11 @@ const authToken = localStorage.getItem(AUTH_TOKEN);
             <Link href="/">Iniciar sesión</Link>
           }}
           >
-            logout
+            Login
           </div>
-        ): (
+        ):(
           <Link href="/LoginContainer" className="ml1 no-underline black">
-            login
+            Logout
           </Link>
         )}
         </div>
