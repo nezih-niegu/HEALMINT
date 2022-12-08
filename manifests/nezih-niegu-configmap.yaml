@@ -6,9 +6,9 @@ metadata:
   labels:
     app: postgres
 data:
-  DEV_SECRET_KEY: kaguya-simp
-  DEV_DATABASE: athnzocb
-  DEV_USER: athnzocb
-  DEV_PASSWORD: KVv4WN4TbOKVJUXwC5BNA3CqyTsGnxwX
-  DEV_HOST: heffalump.db.elephantsql.com
+  DEV_SECRET_KEY: healmint_okteto
+  DEV_DATABASE: jfmfrteg 
+  DEV_USER:	jfmfrteg 
+  DEV_PASSWORD: RMVx-DWoNSyLJtlYD5C0TwLc4KfmvLMC
+  DEV_HOST:  	hansken.db.elephantsql.com
   DEV_PORT: "5432"
