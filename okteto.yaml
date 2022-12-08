@@ -9,4 +9,4 @@ dev:
   nezih-niegu:
     command: bash
     sync:
-    - .:/HEALMINT
+    - .:/
