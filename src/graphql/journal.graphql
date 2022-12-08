@@ -1,9 +1,0 @@
-
-    query{
-  journals
-  {
-    id
-    title
-    body
-  }
-}
