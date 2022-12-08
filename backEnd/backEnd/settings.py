@@ -83,7 +83,7 @@ DEV_DATABASE=config("DEV_DATABASE",default='')
 DEV_USER=config("DEV_USER",default='')
 DEV_PASWORD=config("DEV_PASWORD",default='')
 DEV_HOST=config("DEV_HOST",default='')
-DEV_PORT=config("DEV_PORT",default='')
+DEV_PORT=config("DEV_PORT",default='5432')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
