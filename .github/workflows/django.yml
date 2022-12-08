@@ -56,7 +56,7 @@ jobs:
     - name: Deploy
       uses: okteto/pipeline@2.7.0
       with:
-         name: hackernews-web
+         name: HEALMINT
          timeout: 5m
          #variables: "DEV_USER=${{ secrets.DEV_USER }}"
 
