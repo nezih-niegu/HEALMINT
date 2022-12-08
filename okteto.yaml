@@ -1,0 +1,12 @@
+build:
+  nezih-niegu:
+    image: okteto.dev/nezih-niegu:latest
+
+deploy:
+  - okteto build # build the image with the latest code
+  - kubectl apply -f manifests # create all the resources in kubernetes
+dev:
+  nezih-niegu:
+    command: bash
+    sync:
+    - .:/HEALMINT

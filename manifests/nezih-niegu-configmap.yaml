@@ -1,0 +1,14 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nezih-niegu-config
+  labels:
+    app: postgres
+data:
+  DEV_SECRET_KEY: kaguya-simp
+  DEV_DATABASE: athnzocb
+  DEV_USER: athnzocb
+  DEV_PASSWORD: KVv4WN4TbOKVJUXwC5BNA3CqyTsGnxwX
+  DEV_HOST: heffalump.db.elephantsql.com
+  DEV_PORT: "5432"
