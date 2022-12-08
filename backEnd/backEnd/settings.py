@@ -87,11 +87,11 @@ DEV_PORT=config("DEV_PORT",default='5432')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'jfmfrteg',
-        'USER': 'jfmfrteg',
-        'PASSWORD': 'RMVx-DWoNSyLJtlYD5C0TwLc4KfmvLMC',
-        'HOST': 'hansken.db.elephantsql.com',
-        'PORT': 5432,
+        'NAME': DEV_DATABASE,#'jfmfrteg',
+        'USER': DEV_USER,#'jfmfrteg',
+        'PASSWORD': DEV_PASSWORD,#'RMVx-DWoNSyLJtlYD5C0TwLc4KfmvLMC',
+        'HOST': DEV_HOST,#'hansken.db.elephantsql.com',
+        'PORT': DEV_PORT,#5432,
     }
 }
 
